@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GetYoMoti!!</title>
+    <style>
+      body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("img/wal6.jpeg");
+  height: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+  .hero-logo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 90px;
+      height: 100px;
+    }
+ .booking-link {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 130px;
+      height: 50px;
+      background: #555;
+      color: #FFFFFF;
+      font-size: 18px;
+      text-align: center;
+      line-height: 50px;
+    }
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+    body {
+      font-family: sans-serif;
+      color: #333333;
+      background-color: #f1f1f1;
+    }
+    .main-heading {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    .about-section {
+      font-size: 1.2rem;
+    }
+    .about-us {
+      background-color: #e5e5e5;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .our-mission {
+      background-color: #e5e5e5;
+      padding: 20px;
+      border-radius: 5px;
+    }
+    .about-us h2, .our-mission h2 {
+      font-size: 1.8rem;
+    }
+    .about-us p, .our-mission p {
+      font-size: 1.4rem;
+      margin-bottom: 0;
+    }
+     .container {
+        width: 50%;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        float: left;
+      }
+
+      .container-info {
+        width: 50%;
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        float: right;
+      }
+
+      .faq {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+
+      .faq h2 {
+        background-color: #000000;
+        color: #ffffff;
+        font-size: 1.2em;
+        font-weight: normal;
+        margin-bottom: 15px;
+        padding: 10px;
+      }
+
+      .faq select {
+        width: 100%;
+        font-size: 1.2em;
+        font-weight: normal;
+        margin-bottom: 15px;
+        padding: 5px;
+        border: 1px solid #ccc;
+      }
+
+      .faq option {
+        padding: 10px;
+        font-size: 1.2em;
+        font-weight: normal;
+        margin-bottom: 15px;
+      }
+
+      .faq p {
+        font-size: 1.2em;
+        font-weight: normal;
+        margin-bottom: 15px;
+        padding: 10px;
+        background-color: #f2f2f2;
+      }
+ .footer {
+    width: 100%;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer p {
+    font-size: 1.2rem;
+    color: #666;
+    margin: 0;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #666;
+    margin: 10px 0;
+}
+
+.footer a:hover {
+    font-weight: bold;
+    color: #4CAF50;
+}
+
+
+
+
+            </style>
+</head>
+<body>
+  <div class="hero-image">
+     <img src="img/logo2.jpeg" class="hero-logo">
+        <a href="contact.html" class="booking-link">Contact Us</a>
+  <div class="hero-text">
+    <h4 style="font-size:20px">"Welcome to our online car rental company – your one-stop shop for finding the perfect rental car for your needs. Our team of experienced professionals is here to provide you with personalized service and unbeatable rates. With a wide selection of cars and services to choose from, you are sure to find exactly what you are looking for. Let us make your car rental experience easy and stress-free!"</h4>
+  </div>
+</div>
+   <h1 class="main-heading">About Us</h1>
+  <section class="about-section">
+    <div class="about-us">
+      <p>
+        We are a online car rental company that provides a convenient and easy way for customers to rent cars for their travels. Our mission is to make car rental simple and hassle-free.
+      </p>
+    </div>
+    <div class="our-mission">
+      <h2>Our Mission</h2>
+      <p>
+        Our mission is to make car rental easy and hassle-free by offering a wide range of cars, competitive prices and excellent customer service. We strive to provide a safe and reliable car rental experience for our customers.
+      </p>
+    </div>
+  </section>
+     <div class="container">
+      <div class="faq">
+        <h2>Frequently Asked Questions About Online Rental Cars</h2>
+        <select>
+          <option value="0">Select a Question</option>
+          <option value="1">Is there a minimum age to rent a car?</option>
+          <option value="2">What documents do I need to provide to rent a car?</option>
+          <option value="3">Are there any additional fees associated with renting a car?</option>
+          <option value="4">Do I need to pay a deposit to rent a car?</option>
+          <option value="5">Can I add additional drivers to the rental agreement?</option>
+          <option value="6">What is the cancellation policy?</option>
+        </select>
+        <p id="answer">Select a Question</p>
+        <script type="text/javascript">
+          var select = document.querySelector('select');
+          var answer = document.querySelector('#answer');
+
+          select.onchange = function(){
+            var choice = select.value;
+
+            if(choice == 1){
+              answer.textContent = "Yes, usually you must be at least 25 years old to rent a car.";
+            }
+            else if(choice == 2){
+              answer.textContent = "You will need to provide your driver's license and a valid credit or debit card in your name.";
+            }
+            else if(choice == 3){
+              answer.textContent = "Yes, there may be additional fees for things like insurance, taxes, fuel, and drop-off charges.";
+            }
+            else if(choice == 4){
+              answer.textContent = "Yes, you may be required to pay a deposit to cover any potential damages or other fees associated with the rental.";
+            }
+            else if(choice == 5){
+              answer.textContent = "Yes, you can add additional drivers to the rental agreement, but they may be subject to a fee.";
+            }
+            else if(choice == 6){
+              answer.textContent = "It depends on the rental company, but most rental companies have a 24-hour cancellation policy.";
+            }
+            else {
+              answer.textContent = "Select a Question";
+            }
+          }
+        </script>
+      </div>
+    </div>
+  <div class="footer">
+    <p>&copy; 2022 Car Rental | All Rights Reserved </p>
+      <p><a href="home.html">About Us</a> </p>
+       <p><a href="home.html">Why GetYoMoti?</a> </p>
+        <p><a href="cars.html">Home</a> </p>
+        <p>GetYoMoti.com is a trading name of Booking.com Transport Limited which is a limited company registered in Kenya and Tanzania (Number: 0718349704) whose registered address is at Nairobi, Mombasa, EC4V 6JA. VAT number: GB 855349007.
+GetYoMoti.com is part of Booking Holdings Inc., the world leader in online travel & related services.</p>
+    </div>
+    </div>
+
+</body>
+</html>
+ 
